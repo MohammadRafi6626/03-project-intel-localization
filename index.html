@@ -1,29 +1,96 @@
+<!--
+  This HTML page is in English by default. Users can switch to Arabic (RTL) using the button at the top.
+  Comments are provided for beginners.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Bootstrap CSS (LTR by default) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons for column icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- Your custom styles -->
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-  <!-- ========== Header Section ========== -->
-  <header class="header">
-    <!-- Intel logo (SVG) -->
-    <img src="img/intel-header-logo.svg" alt="Intel Logo" class="header-logo"/>
-    <h1 class="header-title">Sustainability Through the Ages</h1>
-    <p class="header-subtitle">
+<body class="bg-light" id="mainBody">
+
+  <!-- ====== Language Switcher ====== -->
+  <div class="container mt-3 mb-2 text-end">
+    <!-- Simple button to switch language -->
+    <button id="langSwitch" class="btn btn-outline-primary btn-sm">العربية</button>
+  </div>
+
+  <!-- ====== Header ====== -->
+  <header class="header text-center py-5 mb-0">
+    <!-- Intel logo -->
+    <img src="img/intel-header-logo.svg" alt="Intel logo in blue and white" class="header-logo mb-3"/>
+    <h1 class="header-title fw-bold">Sustainability Through the Ages</h1>
+    <p class="header-subtitle mx-auto">
       Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.
     </p>
   </header>
 
-  <!-- ========== Timeline Section ========== -->
+  <!-- ====== Three-Column Section ====== -->
+  <section class="container my-5">
+    <div class="row g-4 text-center">
+      <!-- Column 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <span class="text-primary fs-1">
+                <i class="bi bi-globe2"></i>
+              </span>
+            </div>
+            <h3 class="card-title fw-bold">Global Impact</h3>
+            <p class="card-text">Intel's environmental initiatives drive positive change in communities worldwide, fostering a greener, cleaner planet.</p>
+            <a href="#" class="learn-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <span class="text-success fs-1">
+                <i class="bi bi-cpu"></i>
+              </span>
+            </div>
+            <h3 class="card-title fw-bold">Innovative Technology</h3>
+            <p class="card-text">Cutting-edge advancements make Intel’s chips more energy-efficient, helping reduce carbon footprints in every device.</p>
+            <a href="#" class="learn-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Column 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <div class="mb-3">
+              <span class="text-info fs-1">
+                <i class="bi bi-people"></i>
+              </span>
+            </div>
+            <h3 class="card-title fw-bold">Community & Education</h3>
+            <p class="card-text">Intel invests in education and community outreach, building a more sustainable and inclusive world for future generations.</p>
+            <a href="#" class="learn-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Timeline Section (LTR by default) ====== -->
   <section class="timeline-container">
     <!-- Card 1: 1968 -->
     <div class="milestone-card">
       <h2 class="milestone-year">1968</h2>
       <h3 class="milestone-title">Intel Founded</h3>
-      <img src="img/1.jpg" alt="Intel 1968" class="milestone-image"/>
+      <img src="img/1.jpg" alt="Historic photo: Intel founders in lab, 1968" class="milestone-image"/>
       <p class="milestone-short">
         Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of innovation.
       </p>
@@ -31,113 +98,330 @@
         Intel starts as NM Electronics, quickly changing to Intel, and sets a standard for semiconductor excellence.
       </div>
     </div>
-
     <!-- Card 2: 1971 -->
     <div class="milestone-card">
       <h2 class="milestone-year">1971</h2>
       <h3 class="milestone-title">First Microprocessor</h3>
-      <img src="img/2.jpg" alt="Intel 4004" class="milestone-image"/>
+      <img src="img/2.jpg" alt="Close-up: Intel 4004 microprocessor, 1971" class="milestone-image"/>
       <p class="milestone-short">
-        Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution.
+        Intel unveils the 4004, the world's first commercially available microprocessor, igniting the microprocessor revolution.
       </p>
       <div class="milestone-details">
-        The 4004 enabled the creation of smaller, more efficient devices, laying the groundwork for modern computing.
+        The 4004 enabled the creation of smaller, more efficient devices, paving the way for modern computing.
       </div>
     </div>
-
     <!-- Card 3: 1978 -->
     <div class="milestone-card">
       <h2 class="milestone-year">1978</h2>
-      <h3 class="milestone-title">8086 Processor</h3>
-      <img src="img/3.jpg" alt="Intel 8086" class="milestone-image"/>
+      <h3 class="milestone-title">8086 Microprocessor</h3>
+      <img src="img/3.jpg" alt="Intel 8086 chip, 1978, on a circuit board" class="milestone-image"/>
       <p class="milestone-short">
-        Launch of the 8086 processor, establishing the x86 architecture that drives PCs and servers today.
+        The 8086 microprocessor is launched, establishing the x86 architecture that underpins personal computers and servers today.
       </p>
       <div class="milestone-details">
-        The x86 platform became the backbone of personal and enterprise computing globally.
+        The x86 platform becomes the backbone of personal and enterprise computing worldwide.
       </div>
     </div>
-
     <!-- Card 4: 1985 -->
     <div class="milestone-card">
       <h2 class="milestone-year">1985</h2>
       <h3 class="milestone-title">386 Processor</h3>
-      <img src="img/4.jpg" alt="Intel 386" class="milestone-image"/>
+      <img src="img/4.jpg" alt="Close-up: Intel 386 processor, 1985" class="milestone-image"/>
       <p class="milestone-short">
         Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking.
       </p>
       <div class="milestone-details">
-        32-bit architecture enabled advanced software and improved efficiency in computing.
+        This enabled advanced software and improved efficiency in computing.
       </div>
     </div>
-
     <!-- Card 5: 2006 -->
     <div class="milestone-card">
       <h2 class="milestone-year">2006</h2>
-      <h3 class="milestone-title">Peak GHG Emissions</h3>
-      <img src="img/intel 2006.png" alt="Intel 2006 Emissions" class="milestone-image"/>
+      <h3 class="milestone-title">Peak Greenhouse Gas Emissions</h3>
+      <img src="img/intel 2006.png" alt="Chart: Intel's greenhouse gas emissions peak, 2006" class="milestone-image"/>
       <p class="milestone-short">
-        This year marks Intel's highest annual greenhouse gas emissions for operations.
+        This year marks the highest annual level of greenhouse gas emissions from Intel's operations.
       </p>
       <div class="milestone-details">
-        Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.
+        In the following years, Intel invests heavily in emission-reduction technologies, renewable energy, and energy-efficient manufacturing to reverse this trend.
       </div>
     </div>
-
     <!-- Card 6: 2020 -->
     <div class="milestone-card">
       <h2 class="milestone-year">2020</h2>
-      <h3 class="milestone-title">RISE Strategy</h3>
-      <img src="img/intel rise strategy.jpg" alt="Intel RISE Strategy" class="milestone-image"/>
+      <h3 class="milestone-title">RISE Strategy Launched</h3>
+      <img src="img/intel rise strategy.jpg" alt="Illustration: Intel's RISE strategy" class="milestone-image"/>
       <p class="milestone-short">
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals.
+        Intel launches its RISE strategy (Responsible, Inclusive, Sustainable, Enable) and sets ambitious 2030 goals.
       </p>
       <div class="milestone-details">
-        RISE aims to drive industry-wide progress on climate action, water stewardship, and waste reduction.
+        RISE aims to drive industry-wide progress in climate action, water stewardship, and waste reduction.
       </div>
     </div>
-
     <!-- Card 7: 2022 -->
     <div class="milestone-card">
       <h2 class="milestone-year">2022</h2>
-      <h3 class="milestone-title">Net-Zero by 2040</h3>
-      <img src="img/intel net zero.jpg" alt="Intel Net Zero" class="milestone-image"/>
+      <h3 class="milestone-title">Net Zero by 2040 Commitment</h3>
+      <img src="img/intel net zero.jpg" alt="Illustration: Intel's commitment to net zero emissions by 2040" class="milestone-image"/>
       <p class="milestone-short">
-        Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040.
+        Intel commits to achieving net zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040.
       </p>
       <div class="milestone-details">
-        Building on years of environmental initiatives, Intel sets a new industry benchmark for climate action.
+        Building on years of environmental initiatives, Intel sets a new standard for the industry in climate action.
       </div>
     </div>
-
     <!-- Card 8: 2023 -->
     <div class="milestone-card">
       <h2 class="milestone-year">2023</h2>
-      <h3 class="milestone-title">Renewable Electricity</h3>
-      <img src="img/intel renewable electricity usage.jpg" alt="Intel Renewable Electricity" class="milestone-image"/>
+      <h3 class="milestone-title">Renewable Electricity Milestone</h3>
+      <img src="img/intel renewable electricity usage.jpg" alt="Chart: Intel's renewable electricity usage" class="milestone-image"/>
       <p class="milestone-short">
-        Intel achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions.
+        Intel achieves 99% global renewable electricity usage, significantly reducing carbon emissions.
       </p>
       <div class="milestone-details">
-        This milestone accelerates Intel’s progress toward its long-term sustainability goals.
+        This milestone accelerates Intel's progress towards its long-term sustainability goals.
       </div>
     </div>
-
     <!-- Card 9: 2024 -->
     <div class="milestone-card">
       <h2 class="milestone-year">2024</h2>
       <h3 class="milestone-title">Sustainability Summit</h3>
-      <img src="img/intel sustainability summit 2024.jpg" alt="Intel Sustainability Summit" class="milestone-image"/>
+      <img src="img/intel sustainability summit 2024.jpg" alt="Banner: Intel Sustainability Summit 2024" class="milestone-image"/>
       <p class="milestone-short">
-        Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders.
+        Intel hosts its first Sustainability Summit, bringing together suppliers, government officials, and industry leaders.
       </p>
       <div class="milestone-details">
         Together, they collaborate on next-generation sustainable semiconductor manufacturing.
       </div>
     </div>
   </section>
+  <p class="timeline-tip text-center text-primary">Scroll to view the timeline | Hover over cards for more info</p>
 
-  <!-- Timeline tip -->
-  <p class="timeline-tip">Scroll to view timeline &nbsp; | &nbsp; Hover over cards to learn more!</p>
+  <!-- ====== Newsletter Subscription Form ====== -->
+  <section class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-5">
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <h4 class="mb-3 fw-bold text-primary">Subscribe to Intel Sustainability Newsletter</h4>
+            <form aria-label="Newsletter Subscription">
+              <div class="mb-3">
+                <label for="newsletterEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="newsletterEmail" placeholder="example@email.com" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text">We will not share your email with anyone.</div>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Subscribe Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Footer ====== -->
+  <footer class="bg-dark text-light py-4 mt-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div>&copy; 2024 Intel Corporation. All rights reserved.</div>
+      <nav class="mt-2 mt-md-0">
+        <a href="#" class="text-light mx-2 text-decoration-underline">Privacy Policy</a>
+        <a href="#" class="text-light mx-2 text-decoration-underline">Terms of Use</a>
+        <a href="#" class="text-light mx-2 text-decoration-underline">Contact Us</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Simple JavaScript to switch language and direction -->
+  <script>
+    // This script toggles between English (LTR) and Arabic (RTL) and updates all visible text
+    const langSwitch = document.getElementById('langSwitch');
+    const mainBody = document.getElementById('mainBody');
+    let isArabic = false;
+
+    // Store all text content for both languages
+    const textContent = {
+      en: {
+        langBtn: 'العربية',
+        headerTitle: 'Sustainability Through the Ages',
+        headerSubtitle: "Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.",
+        col1Title: 'Global Impact',
+        col1Text: "Intel's environmental initiatives drive positive change in communities worldwide, fostering a greener, cleaner planet.",
+        col1Link: 'Learn More',
+        col2Title: 'Innovative Technology',
+        col2Text: "Cutting-edge advancements make Intel’s chips more energy-efficient, helping reduce carbon footprints in every device.",
+        col2Link: 'Learn More',
+        col3Title: 'Community & Education',
+        col3Text: "Intel invests in education and community outreach, building a more sustainable and inclusive world for future generations.",
+        col3Link: 'Learn More',
+        timelineTip: 'Scroll to view the timeline | Hover over cards for more info',
+        // Timeline cards
+        t1Title: 'Intel Founded',
+        t1ImgAlt: 'Historic photo: Intel founders in lab, 1968',
+        t1Short: 'Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of innovation.',
+        t1Details: 'Intel starts as NM Electronics, quickly changing to Intel, and sets a standard for semiconductor excellence.',
+        t2Title: 'First Microprocessor',
+        t2ImgAlt: 'Close-up: Intel 4004 microprocessor, 1971',
+        t2Short: 'Intel unveils the 4004, the world\'s first commercially available microprocessor, igniting the microprocessor revolution.',
+        t2Details: 'The 4004 enabled the creation of smaller, more efficient devices, paving the way for modern computing.',
+        t3Title: '8086 Microprocessor',
+        t3ImgAlt: 'Intel 8086 chip, 1978, on a circuit board',
+        t3Short: 'The 8086 microprocessor is launched, establishing the x86 architecture that underpins personal computers and servers today.',
+        t3Details: 'The x86 platform becomes the backbone of personal and enterprise computing worldwide.',
+        t4Title: '386 Processor',
+        t4ImgAlt: 'Close-up: Intel 386 processor, 1985',
+        t4Short: 'Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking.',
+        t4Details: 'This enabled advanced software and improved efficiency in computing.',
+        t5Title: 'Peak Greenhouse Gas Emissions',
+        t5ImgAlt: "Chart: Intel's greenhouse gas emissions peak, 2006",
+        t5Short: "This year marks the highest annual level of greenhouse gas emissions from Intel's operations.",
+        t5Details: 'In the following years, Intel invests heavily in emission-reduction technologies, renewable energy, and energy-efficient manufacturing to reverse this trend.',
+        t6Title: 'RISE Strategy Launched',
+        t6ImgAlt: "Illustration: Intel's RISE strategy",
+        t6Short: 'Intel launches its RISE strategy (Responsible, Inclusive, Sustainable, Enable) and sets ambitious 2030 goals.',
+        t6Details: 'RISE aims to drive industry-wide progress in climate action, water stewardship, and waste reduction.',
+        t7Title: 'Net Zero by 2040 Commitment',
+        t7ImgAlt: "Illustration: Intel's commitment to net zero emissions by 2040",
+        t7Short: 'Intel commits to achieving net zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040.',
+        t7Details: 'Building on years of environmental initiatives, Intel sets a new standard for the industry in climate action.',
+        t8Title: 'Renewable Electricity Milestone',
+        t8ImgAlt: "Chart: Intel's renewable electricity usage",
+        t8Short: 'Intel achieves 99% global renewable electricity usage, significantly reducing carbon emissions.',
+        t8Details: "This milestone accelerates Intel's progress towards its long-term sustainability goals.",
+        t9Title: 'Sustainability Summit',
+        t9ImgAlt: 'Banner: Intel Sustainability Summit 2024',
+        t9Short: 'Intel hosts its first Sustainability Summit, bringing together suppliers, government officials, and industry leaders.',
+        t9Details: 'Together, they collaborate on next-generation sustainable semiconductor manufacturing.',
+        // Newsletter
+        newsletterTitle: 'Subscribe to Intel Sustainability Newsletter',
+        newsletterLabel: 'Email address',
+        newsletterPlaceholder: 'example@email.com',
+        newsletterHelp: 'We will not share your email with anyone.',
+        newsletterBtn: 'Subscribe Now',
+        // Footer
+        footerText: '© 2024 Intel Corporation. All rights reserved.',
+        footerPolicy: 'Privacy Policy',
+        footerTerms: 'Terms of Use',
+        footerContact: 'Contact Us'
+      },
+      ar: {
+        langBtn: 'English',
+        headerTitle: 'الاستدامة عبر العصور',
+        headerSubtitle: 'استكشف رحلة إنتل عبر الزمن، واكتشف كيف شكل التزامنا بالابتكار مستقبلًا أكثر استدامة للتكنولوجيا وكوكبنا.',
+        col1Title: 'الأثر العالمي',
+        col1Text: 'مبادرات إنتل البيئية تحدث تغييرًا إيجابيًا في المجتمعات حول العالم، من أجل كوكب أنظف وأكثر خضرة.',
+        col1Link: 'اعرف المزيد',
+        col2Title: 'تقنية مبتكرة',
+        col2Text: 'تجعل التطورات الحديثة رقائق إنتل أكثر كفاءة في استهلاك الطاقة، مما يساعد في تقليل البصمة الكربونية لكل جهاز.',
+        col2Link: 'اعرف المزيد',
+        col3Title: 'المجتمع والتعليم',
+        col3Text: 'تستثمر إنتل في التعليم والمجتمع لبناء عالم أكثر استدامة وشمولاً للأجيال القادمة.',
+        col3Link: 'اعرف المزيد',
+        timelineTip: 'مرّر لعرض الجدول الزمني | مرّر مؤشر الفأرة فوق البطاقات لمعرفة المزيد',
+        // Timeline cards
+        t1Title: 'تأسيس إنتل',
+        t1ImgAlt: 'صورة تاريخية: مؤسسو إنتل في المختبر، 1968',
+        t1Short: 'روبرت نويس وجوردون مور يغيران اسم الشركة الجديدة من NM Electronics إلى Intel Corporation، ويضعان الأساس لعقود من الابتكار.',
+        t1Details: 'بدأت إنتل باسم NM Electronics، ثم تغيرت بسرعة إلى Intel، وأرست معيارًا للتميز في أشباه الموصلات.',
+        t2Title: 'أول معالج دقيق',
+        t2ImgAlt: 'صورة مقربة: معالج إنتل 4004، 1971',
+        t2Short: 'إنتل تكشف النقاب عن 4004، أول معالج دقيق تجاري في العالم، مما يشعل ثورة المعالجات الدقيقة.',
+        t2Details: 'مكن 4004 من إنشاء أجهزة أصغر وأكثر كفاءة، مما مهد الطريق للحوسبة الحديثة.',
+        t3Title: 'معالج 8086',
+        t3ImgAlt: 'شريحة إنتل 8086، 1978، على لوحة دائرة كهربائية',
+        t3Short: 'إطلاق معالج 8086، الذي أسس بنية x86 التي تدعم أجهزة الكمبيوتر الشخصية والخوادم اليوم.',
+        t3Details: 'أصبحت منصة x86 العمود الفقري للحوسبة الشخصية والمؤسسية على مستوى العالم.',
+        t4Title: 'معالج 386',
+        t4ImgAlt: 'صورة مقربة: معالج إنتل 386، 1985',
+        t4Short: 'إنتل تقدم معالج 386 مع بنية 32 بت، مما ي ushering in a new era of performance and multitasking.',
+        t4Details: 'enabled advanced software and improved efficiency in computing.',
+        t5Title: 'ذروة انبعاثات غازات الدفيئة',
+        t5ImgAlt: 'رسم بياني: ذروة انبعاثات غازات الدفيئة لإنتل، 2006',
+        t5Short: 'هذا العام يمثل أعلى مستوى سنوي لانبعاثات غازات الدفيئة من عمليات إنتل.',
+        t5Details: 'على مدار السنوات اللاحقة، تستثمر إنتل بشكل كبير في تقنيات الحد من الانبعاثات، والطاقة المتجددة، والتصنيع الموفّر للطاقة لعكس هذا الاتجاه.',
+        t6Title: 'استراتيجية RISE',
+        t6ImgAlt: 'رسم توضيحي: استراتيجية إنتل RISE',
+        t6Short: 'إنتل تطلق استراتيجيتها RISE (مسؤولة، شاملة، مستدامة، ممكنة) وأهدافها لعام 2030.',
+        t6Details: 'تهدف RISE إلى دفع التقدم على مستوى الصناعة في مجال العمل المناخي، وإدارة المياه، وتقليل النفايات.',
+        t7Title: 'صافي الصفر بحلول 2040',
+        t7ImgAlt: 'رسم توضيحي: التزام إنتل بالوصول إلى صافي انبعاثات صفرية بحلول 2040',
+        t7Short: 'إنتل تعلن التزامها بتحقيق صافي انبعاثات غازات الدفيئة صفرية (النطاق 1 و2) عبر عملياتها العالمية بحلول 2040.',
+        t7Details: 'بناءً على سنوات من المبادرات البيئية، تحدد إنتل معيارًا جديدًا للصناعة للعمل المناخي.',
+        t8Title: 'الكهرباء المتجددة',
+        t8ImgAlt: 'مخطط: إنتل تستخدم مصادر الطاقة المتجددة',
+        t8Short: 'إنتل تحقق استخدام 99% من الكهرباء المتجددة على مستوى العالم، مما يساعد على خفض انبعاثات الكربون بشكل كبير.',
+        t8Details: 'هذه المعلمة تسرع من تقدم إنتل نحو أهدافها الطويلة الأمد في الاستدامة.',
+        t9Title: 'قمة الاستدامة',
+        t9ImgAlt: 'بانر: قمة الاستدامة لإنتل 2024',
+        t9Short: 'إنتل تستضيف أول قمة للاستدامة، موحدة الموردين، والمسؤولين الحكوميين، وقادة الصناعة.',
+        t9Details: 'معًا، يتعاونون على تصنيع أشباه الموصلات المستدامة من الجيل التالي.',
+        // Newsletter
+        newsletterTitle: 'اشترك في نشرة الاستدامة من Intel',
+        newsletterLabel: 'البريد الإلكتروني',
+        newsletterPlaceholder: 'example@email.com',
+        newsletterHelp: 'لن نشارك بريدك الإلكتروني مع أي جهة.',
+        newsletterBtn: 'اشترك الآن',
+        // Footer
+        footerText: '© 2024 Intel Corporation. كل الحقوق محفوظة.',
+        footerPolicy: 'سياسة الخصوصية',
+        footerTerms: 'شروط الاستخدام',
+        footerContact: 'اتصل بنا'
+      }
+    };
+
+    // Helper function to update all text
+    function updateText(lang) {
+      // Header
+      document.querySelector('.header-title').textContent = textContent[lang].headerTitle;
+      document.querySelector('.header-subtitle').textContent = textContent[lang].headerSubtitle;
+      // Columns
+      document.querySelectorAll('.card-title')[0].textContent = textContent[lang].col1Title;
+      document.querySelectorAll('.card-text')[0].textContent = textContent[lang].col1Text;
+      document.querySelectorAll('.learn-link')[0].textContent = textContent[lang].col1Link;
+      document.querySelectorAll('.card-title')[1].textContent = textContent[lang].col2Title;
+      document.querySelectorAll('.card-text')[1].textContent = textContent[lang].col2Text;
+      document.querySelectorAll('.learn-link')[1].textContent = textContent[lang].col2Link;
+      document.querySelectorAll('.card-title')[2].textContent = textContent[lang].col3Title;
+      document.querySelectorAll('.card-text')[2].textContent = textContent[lang].col3Text;
+      document.querySelectorAll('.learn-link')[2].textContent = textContent[lang].col3Link;
+      // Timeline tip
+      document.querySelector('.timeline-tip').textContent = textContent[lang].timelineTip;
+      // Timeline cards
+      const years = [1,2,3,4,5,6,7,8,9];
+      years.forEach(function(n, i) {
+        document.querySelectorAll('.milestone-title')[i].textContent = textContent[lang][`t${n}Title`];
+        document.querySelectorAll('.milestone-image')[i].alt = textContent[lang][`t${n}ImgAlt`];
+        document.querySelectorAll('.milestone-short')[i].textContent = textContent[lang][`t${n}Short`];
+        document.querySelectorAll('.milestone-details')[i].textContent = textContent[lang][`t${n}Details`];
+      });
+      // Newsletter
+      document.querySelector('.card-body h4').textContent = textContent[lang].newsletterTitle;
+      document.getElementById('newsletterEmail').placeholder = textContent[lang].newsletterPlaceholder;
+      document.querySelector('label[for="newsletterEmail"]').textContent = textContent[lang].newsletterLabel;
+      document.getElementById('emailHelp').textContent = textContent[lang].newsletterHelp;
+      document.querySelector('button[type="submit"]').textContent = textContent[lang].newsletterBtn;
+      // Footer
+      document.querySelector('footer .container > div').textContent = textContent[lang].footerText;
+      document.querySelectorAll('footer nav a')[0].textContent = textContent[lang].footerPolicy;
+      document.querySelectorAll('footer nav a')[1].textContent = textContent[lang].footerTerms;
+      document.querySelectorAll('footer nav a')[2].textContent = textContent[lang].footerContact;
+      // Language button
+      langSwitch.textContent = textContent[lang].langBtn;
+    }
+
+    // Initial text is English
+    updateText('en');
+
+    langSwitch.addEventListener('click', function() {
+      isArabic = !isArabic;
+      if (isArabic) {
+        document.documentElement.lang = 'ar';
+        mainBody.classList.add('rtl');
+        updateText('ar');
+      } else {
+        document.documentElement.lang = 'en';
+        mainBody.classList.remove('rtl');
+        updateText('en');
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,11 +1,16 @@
+/*
+  This CSS file supports both LTR (default) and RTL (when .rtl class is added to <body>).
+  Comments are added for beginners.
+*/
 body {
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
   background: #f4f8fb;
   margin: 0;
   color: #22314a;
+  /* No direction here, handled by .rtl class */
 }
 
-/* Header */
+/* Header styles */
 .header {
   background: linear-gradient(90deg, #0068b5 0%, #00aee6 100%);
   color: #fff;
@@ -30,7 +35,7 @@ body {
   opacity: 0.94;
 }
 
-/* Timeline */
+/* Timeline section styles */
 .timeline-container {
   display: flex;
   overflow-x: auto;
@@ -52,6 +57,7 @@ body {
   cursor: pointer;
   margin-bottom: 8px;
   border: 1.5px solid #e4eef6;
+  text-align: left; /* LTR by default */
 }
 .milestone-year {
   color: #0068b5;
@@ -78,7 +84,6 @@ body {
   font-size: 0.97em;
   margin-bottom: 4px;
 }
-/* Hidden Details with Smooth Reveal */
 .milestone-details {
   max-height: 0;
   opacity: 0;
@@ -94,10 +99,9 @@ body {
   z-index: 2;
 }
 .milestone-card:hover .milestone-details {
-  max-height: 100px; /* Adjust as needed */
+  max-height: 100px;
   opacity: 1;
 }
-/* Timeline scroll tip */
 .timeline-tip {
   text-align: center;
   color: #0068b5;
@@ -105,7 +109,6 @@ body {
   margin: 10px 0 25px 0;
   opacity: 0.92;
 }
-/* Responsive: Stack on small screens */
 @media (max-width: 700px) {
   .timeline-container {
     flex-direction: column;
@@ -119,4 +122,46 @@ body {
     max-width: 100%;
     width: 100%;
   }
+}
+
+/* Style for "Learn More" link */
+.learn-link {
+  color: #0068b5;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.learn-link:hover, .learn-link:focus {
+  color: #004272;
+  text-decoration: none;
+}
+
+/* Card and footer for better contrast */
+.card-title, .card-text {
+  color: #22314a;
+  text-align: left; /* LTR by default */
+}
+footer {
+  font-size: 1em;
+  direction: ltr; /* LTR by default */
+}
+footer a:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* RTL styles: only apply when .rtl class is on <body> */
+.rtl {
+  direction: rtl;
+}
+.rtl .milestone-card,
+.rtl .card-title,
+.rtl .card-text {
+  text-align: right;
+}
+.rtl .timeline-container {
+  flex-direction: row-reverse;
+}
+.rtl footer {
+  direction: rtl;
 }
